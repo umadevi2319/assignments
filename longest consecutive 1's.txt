@@ -1,0 +1,23 @@
+class solution
+{
+public:
+int maxConsecutiveOnes(int N)
+{
+int r=0,c=0;
+while(N>0)
+{
+if((N&1)==1)
+{
+r++;
+}
+else
+{
+r=0;
+}
+N=N>>1;
+c=max(r, c);
+
+}
+return c;
+}
+};
