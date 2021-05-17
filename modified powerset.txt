@@ -1,0 +1,39 @@
+#include<bits/stdc++.h>
+
+int main()
+
+{
+
+int n;
+
+cin >> n;
+
+while(n--)
+
+{
+
+set<char>s;
+
+string s1;
+
+cin >> s1;
+
+for(char x:s1)
+
+{
+
+s.insert(x);
+
+}
+
+long long int  f= s.size();
+
+long long int n1 = f*(f+1)/2;
+
+cout << n1 << endl;
+
+}
+
+return 0;
+
+}
