@@ -1,0 +1,32 @@
+#include<stdio.h>
+#include<string.h>
+void check(char [], int);
+ 
+int main()
+{
+    char s[15];
+ 
+   
+    scanf("%s", s);
+    check(s, 0);
+ 
+    return 0;
+}
+ 
+void check(char s[], int i)
+{
+    int len = strlen(s) - (i + 1);
+    if (s[i] == s[len])
+    {
+        if (i + 1 == len || i == len)
+        {
+            printf("%s is a palindrome",s);
+            return;
+        }
+        check(s, i + 1);
+    }
+    else
+    {
+        printf("%sis not a palindrome",s);
+    }
+}
