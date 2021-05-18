@@ -1,0 +1,31 @@
+#include <iostream>
+
+using namespace std;
+ 
+void printarray(int a[], int n)
+{
+    for (int i = 0; i < n; i++) {
+        cout << a[i] << " ";
+    }
+}
+ 
+
+void arrayreverse(int a[], int l, int h)
+{
+    if (l < h)
+    {
+        swap(a[l], a[h]);
+        arrayreverse(a, l + 1, h - 1);
+    }
+}
+ 
+int main()
+{
+    int a[] = { 10,4,7,8,9 };
+    int n = sizeof(a)/sizeof(a[0]);
+     int l=0,h=n-1;
+    arrayreverse(a, l, h);
+    printarray(a, n);
+ 
+    return 0;
+}
